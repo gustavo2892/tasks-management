@@ -16,7 +16,7 @@ export const Column = ({ id, children }: ColumnProps) => {
     flexDirection: "column" as const,
     gap: "16px",
     minHeight: "500px",
-    background: isOver ? "#e2f7e2" : "#f2f2f3",
+    background: isOver ? "#cbcbcb" : "#f2f2f3",
     borderRadius: "5px",
   };
 

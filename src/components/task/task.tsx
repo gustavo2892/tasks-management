@@ -17,7 +17,6 @@ export const Task = ({ id, name }: TaskProps) => {
   const style = {
     transform: CSS.Translate.toString(transform),
     transition,
-    cursor: "grab",
     borderRadius: "5px",
     backgroundColor: "white",
     width: "100%",
@@ -29,7 +28,7 @@ export const Task = ({ id, name }: TaskProps) => {
     gap: "1.25rem",
     color: "black",
     maxHeight: "3.5rem",
-    opacity: isDragging ? 0.6 : 1,
+    opacity: isDragging ? 0 : 1,
   };
 
   return (

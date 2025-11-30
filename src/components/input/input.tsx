@@ -25,7 +25,7 @@ export const Input = ({ onSubmit }: InputProps) => {
       />
       <button
         onClick={handleSubmit}
-        className="border-none rounded-[10px] py-2.5 px-4 bg-blue-600 text-white"
+        className="border-none rounded-[10px] py-2.5 px-4 bg-blue-600 text-white hover:bg-blue-700 transition-colors cursor-pointer"
       >
         Add
       </button>
