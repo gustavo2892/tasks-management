@@ -2,14 +2,15 @@ import { useDroppable } from "@dnd-kit/core";
 
 type ColumnProps = {
   id: string;
+  title: string;
   children?: React.ReactNode;
 };
 
-export const Column = ({ id, children }: ColumnProps) => {
+export const Column = ({ id, children, title }: ColumnProps) => {
   const { setNodeRef, isOver } = useDroppable({ id });
 
   const style = {
-    padding: "30px 16px",
+    padding: "20px 16px",
     width: "80%",
     maxWidth: "500px",
     display: "flex",
@@ -22,6 +23,7 @@ export const Column = ({ id, children }: ColumnProps) => {
 
   return (
     <div style={style} ref={setNodeRef}>
+      <h2 className="text-black font-bold">{title?.toLocaleUpperCase()}</h2>
       {children}
     </div>
   );

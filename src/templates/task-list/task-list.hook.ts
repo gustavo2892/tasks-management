@@ -13,7 +13,7 @@ export const useTaskList = () => {
       { id: "2", name: "Task 2" },
       { id: "3", name: "Task 3" },
     ],
-    inProgress: [],
+    current: [],
     done: [],
   });
 
@@ -27,6 +27,14 @@ export const useTaskList = () => {
     if (!col) return undefined;
     return columns[col].find((t) => String(t.id) === id);
   };
+
+  const deleteTaskById = (id: string, col: string) => {
+    if (!col) return;
+    setColumns((prev) => ({
+      ...prev,
+      [col]: prev[col].filter((t) => String(t.id) !== id),
+    }));
+  }
 
   const addTask = (name: string) => {
     setColumns((prev) => {
@@ -128,6 +136,7 @@ export const useTaskList = () => {
     columns,
     task,
     addTask,
+    deleteTaskById,
     handleDragEnd,
     handleDragStart,
   };
