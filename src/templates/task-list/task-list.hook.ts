@@ -8,11 +8,7 @@ export const useTaskList = () => {
   const [cursor, setCursor] = useState<string | undefined>(undefined);
   const [task, setTask] = useState<TaskType | undefined>(undefined);
   const [columns, setColumns] = useState<Columns>({
-    todo: [
-      { id: "1", name: "Task 1" },
-      { id: "2", name: "Task 2" },
-      { id: "3", name: "Task 3" },
-    ],
+    todo: [],
     current: [],
     done: [],
   });

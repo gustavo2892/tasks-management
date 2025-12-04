@@ -20,6 +20,7 @@ export const Input = ({ onSubmit }: InputProps) => {
       <input
         className="border-2 border-gray-300 rounded-[10px] p-2.5"
         type="text"
+        maxLength={20}
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />

@@ -16,7 +16,8 @@ export const Column = ({ id, children, title }: ColumnProps) => {
     display: "flex",
     flexDirection: "column" as const,
     gap: "16px",
-    minHeight: "500px",
+    height: "500px",
+    overflowY: "auto" as const,
     background: isOver ? "#cbcbcb" : "#f2f2f3",
     borderRadius: "5px",
   };

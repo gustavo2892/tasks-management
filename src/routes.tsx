@@ -7,6 +7,7 @@ import {
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import { TaskList } from "./templates";
+import { Home } from "./templates/home/home";
 import { Header } from "./components/header/header";
 
 const rootRoute = createRootRoute({
@@ -23,7 +24,7 @@ const rootRoute = createRootRoute({
 const dndKitRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: () => <div>Home</div>,
+  component: () => <Home />,
 });
 
 const reactDndRoute = createRoute({
